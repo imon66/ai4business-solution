@@ -1,0 +1,122 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+  
+  body {
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #0D0118;
+    color: #F3E8FF;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  body, html {
+    overflow-x: hidden;
+    width: 100%;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+    font-weight: 600;
+    letter-spacing: -0.025em;
+    line-height: 1.1;
+    color: #F3E8FF;
+  }
+  
+  p {
+    line-height: 1.7;
+    color: #A78BFA;
+  }
+  
+  a, button {
+    touch-action: manipulation;
+  }
+  
+  ::selection {
+    background-color: rgba(168, 85, 247, 0.3);
+    color: #F3E8FF;
+  }
+}
+
+@layer components {
+  /* Section Styles */
+  .section {
+    @apply py-16 sm:py-20 md:py-28 lg:py-32;
+  }
+  
+  .section-title {
+    @apply text-center mb-4 sm:mb-6;
+    color: #F3E8FF;
+  }
+  
+  .section-subtitle {
+    @apply text-center text-base sm:text-lg md:text-xl max-w-2xl mx-auto mb-12 sm:mb-16 md:mb-20 px-4;
+    color: #A78BFA;
+  }
+  
+  /* Container */
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full;
+  }
+  
+  /* Gradient Text */
+  .gradient-text {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, #C084FC 0%, #A855F7 50%, #9333EA 100%);
+  }
+  
+  /* Divider */
+  .divider-gradient {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #A855F7, transparent);
+    opacity: 0.3;
+  }
+  
+  /* Glow effects */
+  .glow-primary {
+    box-shadow: 0 0 40px rgba(168, 85, 247, 0.25);
+  }
+}
+
+@layer utilities {
+  .font-heading {
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+  }
+  
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #0D0118;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: rgba(168, 85, 247, 0.3);
+    border-radius: 4px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(168, 85, 247, 0.5);
+  }
+  
+  .text-balance {
+    text-wrap: balance;
+  }
+}
